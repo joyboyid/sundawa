@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sundawa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/index.css">
+</head>
+<body>
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="magnify">
+        <h1 onclick="closemagnify()"><i class="fas fa-times"></i></h1>
+        <div id="img_here"></div>
+    </div>
+    <header id="header" class="animated slideInDown" style="animation-delay:1.8s;">
+        <table>
+            <tr>
+                <td id="logo">Sundawa</td>
+                <td id="navigation">
+                    <a href="#product">Product</a>
+                    <a href="/index.html">About</a>
+                    <a href="/page/detail.html">Katalog</a>
+                    <a href="/index.html">Contact</a>
+                </td>
+            </tr>
+        </table>
+    </header>
+    
+    <table id="top_part">
+        <tr>
+            <td id="about" class="animated slideInLeft" style="animation-delay:2s;">     
+                <h1>Details Product</h1>
+                <table>
+                </table>
+            </td>
+            <td id="leftImage" class="animated jackInTheBox" style="animation-delay:2.2s;"></td>
+        </tr>
+    </table>
+
+    <div class="container">
+       
+        <div id="product">
+            <h1>Details</h1>
+            <main id="products">
+                <div class="container">
+                  <div class="producat_wrapper">
+                    <div class="producat_image">
+                      <div class="img_thumbnail">
+                        <img src="/assets/img/produk/series1/Bajang-Series-1.JPG" alt="" />
+                        <div class="img_small">
+                          <img
+                            src="/assets/img/produk/series1/Bajang-Series-1.JPG"
+                            alt=""
+                            class="active"
+                          />
+                          <img src="/assets/img/produk/series1/Bajang-Series-2.JPG" alt="" />
+                          <img src="/assets/img/produk/series1/Bajang-Series-3.JPG" alt="" />
+                          <img src="/assets/img/produk/series1/Bajang-Series-4.JPG" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="producat_content">
+                      <p class="company_txt">T-shirt Series 1</p>
+                      <h2>Limited Edition</h2>
+                      <p class="producat_des">
+                        These low-profile sneakers are your perfect casual wear companion.
+                        Featuring a durable rubber outer sole, they’ll withstand
+                        everything the weather can offer.
+                      </p>
+                      <div class="price">
+                        <div class="dicscount_price">
+                          <p class="normal_price">$125.00</p>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </main>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footerBottom">
+            <p>Copyright &copy;2024; <span class="designer">Sundawa</span></p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/index.js" type="text/javascript"></script>
+    <script>
+        const thumImg = document.querySelectorAll(".img_small img");
+        const imgLarge = document.querySelector(".img_thumbnail img");
+
+        thumImg.forEach((img, indx) => {
+        indx++;
+        img.addEventListener("click", (e) => {
+          imgLarge.src = `/assets/img/produk/series1/Bajang-Series-${indx}.JPG`;
+         thumImg.forEach((thumb) => thumb.classList.remove("active"));
+            img.classList.add("active");
+          });
+        });
+    </script>
+</body>
+</html>

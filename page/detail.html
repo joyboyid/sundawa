@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sundawa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/index.css">
+</head>
+<body>
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="magnify">
+        <h1 onclick="closemagnify()"><i class="fas fa-times"></i></h1>
+        <div id="img_here"></div>
+    </div>
+    <header id="header" class="animated slideInDown" style="animation-delay:1.8s;">
+        <table>
+            <tr>
+                <td id="logo">Sundawa</td>
+                <td id="navigation">
+                    <a href="#product">Product</a>
+                    <a href="/index.html">About</a>
+                    <a href="/page/detail.html">Katalog</a>
+                    <a href="/index.html">Contact</a>
+                </td>
+            </tr>
+        </table>
+    </header>
+    <table id="top_part">
+        <tr>
+            <td id="about" class="animated slideInLeft" style="animation-delay:2s;">     
+                <h1>Gallery & Details Product</h1>
+                <!-- <img src="/assets/img/logo/Artboard 3.png" alt="" width="250" height="250"> -->
+                <table>
+                </table>
+            </td>
+            <td id="leftImage" class="animated jackInTheBox" style="animation-delay:2.2s;"></td>
+        </tr>
+    </table>
+    <div id="product">
+        <h1>Product</h1>
+        <div id="photos">
+            <img onclick="magnify($(this).attr('src'))" src="/assets/img/content/Bajang Series-06351.JPG"><a href="/page/details/series1.html">Details</a>
+            <img onclick="magnify($(this).attr('src'))" src="/assets/img/content/Bajang Series-06394.JPG">
+        </div>
+    </div>
+    <footer>
+        <div class="footerBottom">
+            <p>Copyright &copy;2024; <span class="designer">Sundawa</span></p>
+        </div>
+    </footer>
+    <script src="/assets/js/index.js" type="text/javascript"></script>
+
+</body>
+</html>
